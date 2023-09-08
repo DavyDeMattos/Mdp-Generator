@@ -25,9 +25,9 @@
                 Mot de Passe
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Générer un mot de passe</a></li>
+                <li><a class="dropdown-item" href="./generate.html">Générer un mot de passe</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Tester un mot de passe</a></li>
+                <li><a class="dropdown-item" href="./test.html">Tester un mot de passe</a></li>
               </ul>
             </li>
           </ul>
@@ -38,10 +38,15 @@
   <main>
     <div class="container">
       <h1>Tester un mot de passe</h1>
+
+      <div class="passwordTesting">
+          <input class="form-control form-control-lg" id="passwordToCheck" type="text" placeholder="Votre mot de passe à tester" aria-label="Tester votre mot de passe">
+      </div>
     </div>
   </main>
   <footer></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="../JS/app.js"></script>
+  <!-- <script src="../JS/app.js"></script> -->
+  <script src="../JS/testing.js"></script>
 </body>
 </html>
