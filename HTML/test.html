@@ -39,9 +39,14 @@
     <div class="container">
       <h1>Tester un mot de passe</h1>
 
-      <div class="passwordTesting">
-          <input class="form-control form-control-lg" id="passwordToCheck" type="text" placeholder="Votre mot de passe à tester" aria-label="Tester votre mot de passe">
+      <input class="form-control form-control-lg" id="passwordToCheck" type="text" placeholder="Votre mot de passe à tester" aria-label="Tester votre mot de passe">
+
+      <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 0%"><span id="values"></span></div>
       </div>
+      
+      <h3 class="mt-4">Note pour l'utilisateur :</h3>
+      <p>Les informations indiqué par la barre de progression ne reflète pas la véritable force du mot de passe. Je n'ai pas des connaissances approfondi en la matière. </p>
     </div>
   </main>
   <footer></footer>
