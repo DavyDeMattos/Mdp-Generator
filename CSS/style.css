@@ -1,0 +1,59 @@
+.modal{
+  display: block;
+  position: relative;
+}
+
+html {
+  --theme-green-main: #4b8;
+  --theme-green-alt: #296;
+  --theme-red-main: rgb(243, 74, 52);
+  --theme-red-alt: rgb(207, 52, 31);
+  --theme-blue-main: rgb(68, 124, 187);
+  --theme-blue-alt: rgb(48, 103, 165);
+
+  --color-main: var(--theme-green-main);
+  --color-alt: var(--theme-green-alt);
+  --border-normal: 1px solid rgba(0, 0, 0, .2);
+  --color-bg: white;
+  --color-opacity: rgba(0, 0, 0, .1);
+}
+
+main {
+  font-family: 'Noto Sans', sans-serif;
+  transition: background-color .3s;
+  /* background-color: var(--theme-blue-main); */
+}
+/* newletter */
+
+.newsletter, .popup {
+  position: fixed;
+  z-index: 9;
+  right:0;
+  bottom: 0;
+  background-color: var(--color-bg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: var(--border-normal);
+  padding: 2rem;
+  width: 25em;
+  max-width: 100%;
+  display: none;
+}
+
+
+.newsletter--on, .popup--on {
+  display: block;
+  animation: .3s 0s 1 pop;
+}
+
+
+.newsletter__title, .popup__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.newsletter__close, .popup__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

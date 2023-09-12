@@ -39,11 +39,15 @@ const testing = {
     // if(/^(?=.[A-Z])(?=.[a-z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,26}$/.test(mdp)){
     //   console.log("Success");
     // }
-    let strong = 10;
+    let strong = 0;
 
+    if ((/.{0,7}/).test(mdp)){
+      // console.log("<8");
+      strong += 10;
+    }
     if(/[@$!%?&]/.test(mdp)){
       // console.log("special");
-      strong += 10;
+      strong += 20;
     }
     if ((/[A-Z]/).test(mdp)){
       // console.log("MAJ");
@@ -51,7 +55,7 @@ const testing = {
     }
     if ((/.{8,}/).test(mdp)){
       // console.log("<8");
-      strong += 60;
+      strong += 50;
     }
     if ((/[\d]/).test(mdp)){
       // console.log("number");
@@ -71,26 +75,26 @@ const testing = {
     progressBar.style.width = `${number}%`;
     // console.log(progressBar);
     const isStrong = document.querySelector('#values');
-    // const allClass = `"bg-danger", "bg-warning", "text-dark", "bg-success"`;
+    const allClass = ["bg-danger", "bg-warning", "text-dark", "bg-success"];
+    progressBar.classList.remove(...allClass)
     // console.log(allClass);
     if (number <= 25){
-      // progressBar.classList.remove(allClass);
-      progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
+      // progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
       progressBar.classList.add("bg-danger");
       isStrong.textContent = "Très Faible";
     }else if (25 < number && number <= 65){
       // progressBar.classList.remove(allClass);
-      progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
+      // progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
       progressBar.classList.add("bg-danger");
       isStrong.textContent = "Faible";
     }else if (65 < number && number <= 85){
       // progressBar.classList.remove(allClass);
-      progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
+      // progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
       progressBar.classList.add("bg-warning", "text-dark");
       isStrong.textContent = "Moyen";
     }else if (85 < number){
       // progressBar.classList.remove(allClass);
-      progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
+      // progressBar.classList.remove("bg-danger", "bg-warning", "text-dark", "bg-success");
       progressBar.classList.add("bg-success");
       isStrong.textContent = "Fort";
     }

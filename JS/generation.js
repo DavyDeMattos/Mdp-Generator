@@ -54,7 +54,7 @@ const generation = {
    */
   passwordLenght: function(length){
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@$!%?&abcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = `ABCDEFGHIJKLMNOPQRSTUVWXYZ@$_(-)§:*µ#^$£!%?&abcdefghijklmnopqrstuvwxyz0123456789`;
     const charactersLength = characters.length;
     let counter = 0;
     while (counter < length) {

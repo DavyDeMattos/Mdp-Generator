@@ -10,21 +10,21 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar bg-primary-subtle navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item bg-light-subtle me-2 rounded-pill">
               <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item bg-light-subtle me-2 rounded-pill">
               <a class="nav-link" href="./owasp.html">Recommandation de l'OWASP</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item bg-light-subtle dropdown rounded-pill">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Mot de Passe
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu bg-light-subtle me-2">
                 <li><a class="dropdown-item" href="./generate.html">Générer un mot de passe</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="./test.html">Tester un mot de passe</a></li>
@@ -36,35 +36,36 @@
     </nav>
   </header>
   <main>
-    <div class="container">
+    <div class="container text-start mt-3">
       <h1>Générer un mot de passe</h1>
-      <div class="passwordGeneration">
+      <div class="passwordGeneration container-lg">
         <form action="POST">
-          <!-- <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="8" name="mdp_length-mini" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Taille minimum
-              </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="mdp_number" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Avec chiffres
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="mdp_special" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Avec charactères spéciaux
-            </label>
-          </div> -->
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Générer</button>
+            <button class="btn btn-primary my-3" type="submit">Générer</button>
           </div>
-          <span id="generate-mdp">
+          <span class="border border-primary border-3s rounded-end p-3 text-end fs-1" id="generate-mdp">
             ici sera afficher le mdp
           </span>
         </form>
+        <div class="container-md mt-4">
+          <h2>Conseils : </h2>
+          <p class="text-start">Pour établir vous-même vos mots de passe, réfléchissez à une phrase clef mnémotechnique.</p>
+          <p>
+            Par exemple, vous pourvez reprendre le même principe que pour retenir le nom des planètes :
+            <ul>
+              <li>Merveilleuse Vue, Toute Ma Joie Sur Un Nuage</li>
+              <li>M-V-T-M-J-S-U-N</li>
+              <li>Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune</li>
+            </ul>
+            Et si on souhaite complexifier un peu plus, il est envisageable de remplacer des lettre par d'autres caractères.
+            <ui>
+              <li>"Voici un mot de passe bien complexe que nous avons là"</li>
+              <li>"<span class="text-danger">V</span>oici <span class="text-danger">1</span> <span class="text-danger">m</span>ot <span class="text-danger">2</span> <span class="text-danger">P</span>asse <span class="text-danger">b</span>ien <span class="text-danger">C</span>omplexe <span class="text-danger">Q</span>ue <span class="text-danger">n</span>ous <span class="text-danger">4</span>vons <span class="text-danger">l@</span>"</li>
+              <li>"V1m2PbCQn4l@"</li>
+            </ui>
+            Tant que vous vous souvenez de cette phrase, que vous la notiez quelque part (de préférence sur un papier pour éviter tout piratage) et que fasiez preuve d'imagination, vous pouvez créer des mots de passes forts.
+          </p>
+        </div>
       </div>
     </div>
   </main>
